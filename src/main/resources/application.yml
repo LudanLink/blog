@@ -1,0 +1,11 @@
+logging:
+  level:
+    ROOT: info
+  pattern:
+    console: "${CONSOLE_LOG_PATTERN:-%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %boldCyan([%X{sessionId}, %X{requestId}]) %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}"
+#    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [SID:%X{sessionId}, RID:%X{requestId}] %-5p ${PID:- } --- [%15.15t] %-40.40logger{39} : %m%n}"
+#    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p ${PID:- } --- [%15.15t] %-40.40logger{39} : %m%n}"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file: /Users/ludan/Downloads/test-log/mylog.log
+server:
+  port: 8080
